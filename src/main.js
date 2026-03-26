@@ -1,6 +1,6 @@
 import './style.css'
 
-//IONIC IMPORT
+// IONIC IMPORT
 // Load Ionic
 (async () => {
   // Set the path to a variable to
@@ -28,3 +28,10 @@ import '@ionic/core/css/display.css';
 // PAGES
 import './pages/login/LoginPage.js';
 import './pages/home/HomePage.js';
+
+//produto
+import './pages/produto/ListProdutoPage.js';
+import './pages/produto/CadProdutoPage.js';
+import './pages/produto/EditProdutoPage.js';
+
+import './pages/usuario/UsuarioPage.js';
