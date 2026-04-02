@@ -34,4 +34,6 @@ import './pages/produto/ListProdutoPage.js';
 import './pages/produto/CadProdutoPage.js';
 import './pages/produto/EditProdutoPage.js';
 
-import './pages/usuario/UsuarioPage.js';
+import './pages/usuario/ListUsuarioPage.js';
+import './pages/usuario/CadUsuarioPage.js';
+

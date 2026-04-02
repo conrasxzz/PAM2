@@ -1,43 +1,47 @@
-import './CadProdutoPage.css'
+import './CadUsuarioPage.css'
 import { createHeader } from '../../shared/Header.js'
 import { logout } from '../../shared/util.js';
 
-const pageName = 'Cadastrar Produto';
+const pageName = 'Cadastrar Usuário';
 
-class CadProdutoPage extends HTMLElement {
+class CadUsuarioPage extends HTMLElement {
     connectedCallback() {
         this.classList.add('ion-page');
         const cabecalho = createHeader(pageName);
         this.innerHTML = `
             ${cabecalho}
             <ion-content class="ion-padding">
-                <form id="form-produto">
+                <form id="form-usuario">
                     <ion-list>
                         <ion-item>
-                            <ion-input type="text" name="dsc_produto"
-                            label="Descrição do Produto" labelPlacement="floating" required>
+                            <ion-input type="text" name="nome"
+                            label="Nome Completo" labelPlacement="floating" required>
                             </ion-input>
                         </ion-item>
                         <ion-item>
-                            <ion-input type="number" step="0.01" name="valor_unit"
-                            label="Valor Unitário" labelPlacement="floating" required>
+                            <ion-input type="text" name="usuario"
+                            label="Nome de Usuário" labelPlacement="floating" required>
                             </ion-input>
                         </ion-item>
                         <ion-item>
-                            <ion-label>Ativo</ion-label>
-                            <ion-toggle slot="end" name="status" checked></ion-toggle>
+                            <ion-input type="password" name="senha"
+                            label="Senha" labelPlacement="floating" required>
+                            </ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-input type="number" name="perfil"
+                            label="Perfil" labelPlacement="floating" required>
+                            </ion-input>
                         </ion-item>
                     </ion-list>
                     <div class="ion-padding">
                         <ion-button expand="block" type="submit" class="ion-margin-top">
-                        Salvar Produto
+                        Cadastrar Usuário
                         </ion-button>
                         <ion-button expand="block" color="danger" id="btn-cancelar">
                         Cancelar
                         </ion-button>
-
                     </div>                    
-
                 </form>
             </ion-content>
         `;
@@ -46,10 +50,10 @@ class CadProdutoPage extends HTMLElement {
         
         this.querySelector('#btn-cancelar')
         .addEventListener('click' , () => {
-            window.location.hash = '#/produto/list';
+            window.location.hash = '#/usuario/list';
 
         });
     }
 }
 
-customElements.define('cad-produto-page', CadProdutoPage);
+customElements.define('cad-usuario-page', CadUsuarioPage);
